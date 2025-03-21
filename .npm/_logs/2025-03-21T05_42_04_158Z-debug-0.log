@@ -1,0 +1,90 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.5.0
+2 info using node@v21.7.3
+3 timing npm:load:whichnode Completed in 2ms
+4 timing config:load:defaults Completed in 1ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 1ms
+7 timing config:load:cli Completed in 2ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:/home/project/.npmrc Completed in 0ms
+10 timing config:load:project Completed in 2ms
+11 timing config:load:file:/home/user/.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:/usr/local/etc/npmrc Completed in 1ms
+14 timing config:load:global Completed in 1ms
+15 timing config:load:setEnvs Completed in 0ms
+16 timing config:load Completed in 7ms
+17 timing npm:load:configload Completed in 7ms
+18 timing config:load:flatten Completed in 2ms
+19 timing npm:load:mkdirpcache Completed in 0ms
+20 timing npm:load:mkdirplogs Completed in 0ms
+21 verbose title npm install
+22 verbose argv "install"
+23 timing npm:load:setTitle Completed in 1ms
+24 timing npm:load:display Completed in 0ms
+25 verbose logfile logs-max:10 dir:/home/user/.npm/_logs/2025-03-21T05_42_04_158Z-
+26 verbose logfile /home/user/.npm/_logs/2025-03-21T05_42_04_158Z-debug-0.log
+27 timing npm:load:logFile Completed in 9ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 36ms
+31 timing arborist:ctor Completed in 0ms
+32 silly logfile done cleaning log files
+33 timing idealTree:init Completed in 94ms
+34 timing idealTree:userRequests Completed in 0ms
+35 silly idealTree buildDeps
+36 timing idealTree:#root Completed in 0ms
+37 timing idealTree:buildDeps Completed in 2ms
+38 timing idealTree:fixDepFlags Completed in 0ms
+39 timing idealTree Completed in 98ms
+40 timing arborist:ctor Completed in 0ms
+41 timing reify:loadTrees Completed in 162ms
+42 timing reify:diffTrees Completed in 8ms
+43 silly reify moves {}
+44 timing reify:retireShallow Completed in 1ms
+45 timing reify:rollback:createSparse Completed in 0ms
+46 timing reify:rollback:retireShallow Completed in 0ms
+47 timing command:install Completed in 184ms
+48 verbose stack Error: EACCES: permission denied, mkdir '/home/project/node_modules/@emnapi/runtime'
+48 verbose stack     at async mkdir (node:internal/fs/promises:859:10)
+48 verbose stack     at async /usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:546:20
+48 verbose stack     at async Promise.allSettled (index 0)
+48 verbose stack     at async [reifyPackages] (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:246:11)
+48 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:165:5)
+48 verbose stack     at async Install.exec (/usr/local/lib/node_modules/npm/lib/commands/install.js:153:5)
+48 verbose stack     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli-entry.js:61:5)
+49 verbose cwd /home/project
+50 verbose Linux 6.1.102
+51 verbose node v21.7.3
+52 verbose npm  v10.5.0
+53 error code EACCES
+54 error syscall mkdir
+55 error path /home/project/node_modules/@emnapi/runtime
+56 error errno -13
+57 error Error: EACCES: permission denied, mkdir '/home/project/node_modules/@emnapi/runtime'
+57 error     at async mkdir (node:internal/fs/promises:859:10)
+57 error     at async /usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:546:20
+57 error     at async Promise.allSettled (index 0)
+57 error     at async [reifyPackages] (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:246:11)
+57 error     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:165:5)
+57 error     at async Install.exec (/usr/local/lib/node_modules/npm/lib/commands/install.js:153:5)
+57 error     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli-entry.js:61:5) {
+57 error   errno: -13,
+57 error   code: 'EACCES',
+57 error   syscall: 'mkdir',
+57 error   path: '/home/project/node_modules/@emnapi/runtime'
+57 error }
+58 error
+58 error The operation was rejected by your operating system.
+58 error It is likely you do not have the permissions to access this file as the current user
+58 error
+58 error If you believe this might be a permissions issue, please double-check the
+58 error permissions of the file and its containing directories, or try running
+58 error the command again as root/Administrator.
+59 verbose exit -13
+60 timing npm Completed in 377ms
+61 verbose unfinished npm timer reify 1742535724346
+62 verbose unfinished npm timer reify:createSparse 1742535724522
+63 verbose code -13
+64 error A complete log of this run can be found in: /home/user/.npm/_logs/2025-03-21T05_42_04_158Z-debug-0.log
